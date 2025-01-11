@@ -22,7 +22,7 @@
                 <nav>
                 	<div class="menu-main-menu-container">
                     	<ul id="menu-main-menu" class="menu">
-                        	<li class="menu-item-has-children">
+                        	<li class="current-menu-parent menu-item-has-children">
                             	<a href="index.html"><span>Home</span></a>
                             </li>
                             <li class="menu-item-has-children">
@@ -38,7 +38,7 @@
 <!--                                    <li><a href="gallery_portrait_landscape.html"><span>Portrait &#038; Landscape</span></a></li>-->
                                 </ul>
                             </li>
-                            <li class="current-menu-parent menu-item-has-children">
+                            <li class="menu-item-has-children">
                             	<a href="#"><span>Other Countries</span></a>
                                 <ul class="sub-menu">
                                     <li><a href="#"><span>Austria</span></a></li>
@@ -47,7 +47,7 @@
                                     <li><a href="#"><span>Montenegro</span></a></li>
                                     <li><a href="#"><span>Serbia</span></a></li>
                                     <li><a href="#"><span>Slovenia</span></a></li>
-                                </ul>
+                                </ul>                                
                             </li>
                         </ul>                    
                     </div>
@@ -58,8 +58,8 @@
                         	<div class="textwidget">
                             	<div class="center_text">
                                 	<img src="img/imgs/widget.jpg" alt="" class="header_widget" />
-                                    <h6>Hello And Welcome</h6>
-                                    to Black Diamond photo studio! Glad to see you here!
+                                    <h6>Welcome</h6>
+                                    Eva @ Me
                                 </div>
                             </div>		
                         </div>
@@ -75,94 +75,106 @@
                         <li><a class="ico_social_flickr" target="_blank" href="http://flickr.com" title="Flickr"></a></li>
                     </ul>
                 </div>
-                <div class="copyright">Copyright &copy; Black Diamond.<br>All Rights Reserved</div>
+                <div class="copyright">Copyright &copy; Eva @ Me<br>All Rights Reserved</div>
             </div><!-- footer_wrapper -->
     	</div>
 	</header>
     
-	<div class="fullscreen-gallery">
-	    <div class="fs_grid_gallery">
-        	<div class="fs_title_wrapper"></div>
-            <a href="javascript:void(0)" class="control_toggle"></a>
-            <div class="gallery_post_controls">
-            	<a href="javascript:history.back()" class="gallery_post_close"></a>
-                <div class="fright"><a href="javascript:void(0);"></a></div>
-                <div class="fleft"><a href="javascript:void(0);"></a></div>
-            </div>
-        </div>
+    <div class="fullscreen_block fw_background bg_image bg1">
+
     </div>
     
-    <div class="custom_bg img_bg def_bg"></div>
+    <div class="custom_bg"></div>
     
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>    
     <script type="text/javascript" src="js/modules.js"></script>
 	<script type="text/javascript" src="js/theme.js"></script>
     <script>
-    	gallery_set = [
-			{type: "image", image: "img/gallery/slider/1.jpg", thmb: "img/gallery/slider/thumbs/1.jpg", alt: "", title: "", description: "", titleColor: "", descriptionColor: ""},
-			{type: "image", image: "img/gallery/slider/2.jpg", thmb: "img/gallery/slider/thumbs/2.jpg", alt: "", title: "", description: "", titleColor: "", descriptionColor: ""},
-			{type: "image", image: "img/gallery/slider/4.jpg", thmb: "img/gallery/slider/thumbs/4.jpg", alt: "", title: "", description: "", titleColor: "", descriptionColor: ""},
-			{type: "image", image: "img/gallery/slider/5.jpg", thmb: "img/gallery/slider/thumbs/5.jpg", alt: "", title: "", description: "", titleColor: "", descriptionColor: ""},
-			{type: "image", image: "img/gallery/slider/6.jpg", thmb: "img/gallery/slider/thumbs/6.jpg", alt: "", title: "", description: "", titleColor: "", descriptionColor: ""},
-			{type: "image", image: "img/gallery/slider/7.jpg", thmb: "img/gallery/slider/thumbs/7.jpg", alt: "", title: "", description: "", titleColor: "", descriptionColor: ""}
-		]
-		
-		jQuery(document).ready(function(){
+    	jQuery(document).ready(function() {
 			"use strict";
-			jQuery('.custom_bg').remove();
+			jQuery('.fw_background').height(jQuery(window).height());
 			jQuery('.main_header').removeClass('hided');
-			jQuery('html').addClass('single-gallery');
-											
-			jQuery('.control_toggle').click(function(){
-				jQuery('html').toggleClass('hide_controls');
-			});
-			
-			jQuery('html').addClass('hasPag');
-			jQuery('body').fs_gallery({
-				fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
-				fit: 'no_fit',
-				slide_time: 3000, /*This time must be < then time in css*/
-				autoplay: 2,
-				show_controls: true,
-				slides: gallery_set
-			});
-			jQuery('.fs_share').click(function(){
-				jQuery('.fs_fadder').removeClass('hided');
-				jQuery('.fs_sharing_wrapper').removeClass('hided');
-				jQuery('.fs_share_close').removeClass('hided');
-			});
-			jQuery('.fs_share_close').click(function(){
-				jQuery('.fs_fadder').addClass('hided');
-				jQuery('.fs_sharing_wrapper').addClass('hided');
-				jQuery('.fs_share_close').addClass('hided');
-			});
-			jQuery('.fs_fadder').click(function(){
-				jQuery('.fs_fadder').addClass('hided');
-				jQuery('.fs_sharing_wrapper').addClass('hided');
-				jQuery('.fs_share_close').addClass('hided');
-			});
-	
-			jQuery('.fs_controls').addClass('up_me');
-			jQuery('.fs_title_wrapper ').addClass('up_me');
-		
-			jQuery('.close_controls').click(function(){
-				if (jQuery(this).hasClass('open_controls')) {
-					jQuery('.fs_controls').removeClass('hide_me');
-					jQuery('.fs_title_wrapper ').removeClass('hide_me');
-					jQuery('.fs_thmb_viewport').removeClass('hide_me');
-					jQuery('header.main_header').removeClass('hide_me');
-					jQuery(this).removeClass('open_controls');
-				} else {		
-					jQuery('header.main_header').addClass('hide_me');
-					jQuery('.fs_controls').addClass('hide_me');
-					jQuery('.fs_title_wrapper ').addClass('hide_me');
-					jQuery('.fs_thmb_viewport').addClass('hide_me');
-					jQuery(this).addClass('open_controls');
+			jQuery('.fullscreen_block').addClass('loaded');
+			if (jQuery(window).width() > 1024) {
+				if (jQuery('.bg_video').size() > 0) {
+					if (((jQuery(window).height()+150)/9)*16 > jQuery(window).width()) {				
+						jQuery('iframe').height(jQuery(window).height()+150).width(((jQuery(window).height()+150)/9)*16);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'top' : "-75px", 'margin-top' : '0px'});
+					} else {
+						jQuery('iframe').width(jQuery(window).width()).height(((jQuery(window).width())/16)*9);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'margin-top' : (-1*jQuery('iframe').height()/2)+'px', 'top' : '50%'});
+					}
 				}
-			});						
+			} else if (jQuery(window).width() < 760) {
+				jQuery('.bg_video').height(window_h-header.height()).width(window_w).css({
+					'top': '0px',
+					'left': '0px',
+					'margin-left': '0px',
+					'margin-top': '0px'
+				});
+				jQuery('iframe').height(window_h-header.height()).width(window_w).css({
+					'top': '0px',
+					'left': '0px',
+					'margin-left': '0px',
+					'margin-top': '0px'
+				});
+			} else {
+				jQuery('.bg_video').height(window_h).width(window_w-header_w).css({
+					'top': '0px',
+					'margin-left' : '0px',
+					'left' : header_w+'px',
+					'margin-top': '0px'
+				});				
+				jQuery('iframe').height(window_h).width(window_w-header_w).css({
+					'top': '0px',
+					'margin-left' : '0px',
+					'left' : header_w+'px',
+					'margin-top': '0px'
+				});			
+			}			
+		});
+		jQuery(window).resize(function() {
+			"use strict";
+			jQuery('.fw_background').height(jQuery(window).height());
+			if (jQuery(window).width() > 1024	) {
+				if (jQuery('.bg_video').size() > 0) {
+					if (((jQuery(window).height()+150)/9)*16 > jQuery(window).width()) {
+						jQuery('iframe').height(jQuery(window).height()+150).width(((jQuery(window).height()+150)/9)*16);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'top' : "-75px", 'margin-top' : '0px'});
+					} else {
+						jQuery('iframe').width(jQuery(window).width()).height(((jQuery(window).width())/16)*9);
+						jQuery('iframe').css({'margin-left' : (-1*jQuery('iframe').width()/2)+'px', 'margin-top' : (-1*jQuery('iframe').height()/2)+'px', 'top' : '50%'});
+					}
+				}
+			} else if (jQuery(window).width() < 760) {
+				jQuery('.bg_video').height(window_h-header.height()).width(window_w).css({
+					'top': '0px',
+					'left': '0px',
+					'margin-left': '0px',
+					'margin-top': '0px'
+				});
+				jQuery('iframe').height(window_h-header.height()).width(window_w).css({
+					'top': '0px',
+					'left': '0px',
+					'margin-left': '0px',
+					'margin-top': '0px'
+				});
+			} else {
+				jQuery('.bg_video').height(window_h).width(window_w-header_w).css({
+					'top': '0px',
+					'margin-left' : '0px',
+					'left' : header_w+'px',
+					'margin-top': '0px'
+				});				
+				jQuery('iframe').height(window_h).width(window_w-header_w).css({
+					'top': '0px',
+					'margin-left' : '0px',
+					'left' : header_w+'px',
+					'margin-top': '0px'
+				});			
+			}			
 		});
 	</script>
-    <script type="text/javascript" src="js/fs_gallery.js"></script>
 </body>
 </html>
