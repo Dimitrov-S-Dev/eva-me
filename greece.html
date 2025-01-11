@@ -22,31 +22,31 @@
                 <nav>
                 	<div class="menu-main-menu-container">
                     	<ul id="menu-main-menu" class="menu">
-                        	<li class="current-menu-item">
+                        	<li class="menu-item-has-children">
                             	<a href="index.html"><span>Home</span></a>
                             </li>
-                            <li class="menu-item-has-children">
+                            <li class="current-menu-parent menu-item-has-children">
                             	<a href="#"><span>Bulgaria</span></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#"><span>A</span></a></li>
-                                    <li><a href="#"><span>B</span></a></li>
-                                    <li><a href="#"><span>C</span></a></li>
-                                    <li><a href="#"><span>D</span></a></li>
-                                    <li><a href="#"><span>E</span></a></li>
-                                    <li><a href="#"><span>F</span></a></li>
-                                    <li><a href="#"><span>G</span></a></li>
-<!--                                    <li><a href="greece.html"><span>Portrait &#038; Landscape</span></a></li>-->
+                                    <li><a href="gallery_albums.html"><span>A</span></a></li>
+                                    <li><a href="gallery_kenburns.html"><span>B</span></a></li>
+                                    <li><a href="gallery_ribbon.html"><span>C</span></a></li>
+                                    <li><a href="gallery_grid.html"><span>D</span></a></li>
+                                    <li><a href="gallery_masonry.html"><span>E</span></a></li>
+                                    <li><a href="gallery_grid_with_margin.html"><span>F</span></a></li>
+                                    <li><a href="gallery_fullscreen_vertical.html"><span>G</span></a></li>
+<!--                                    <li class="current-menu-item"><a href="greece.html"><span>Portrait &#038; Landscape</span></a></li>-->
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
                             	<a href="#"><span>Other Countries</span></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#"><span>Austria</span></a></li>
-                                    <li><a href="#"><span>Croatia</span></a></li>
-                                    <li><a href="greece.html"><span>Greece</span></a></li>
-                                    <li><a href="#"><span>Montenegro</span></a></li>
-                                    <li><a href="#"><span>Serbia</span></a></li>
-                                    <li><a href="#"><span>Slovenia</span></a></li>
+                                    <li><a href="portfolio_grid2.html"><span>Austria</span></a></li>
+                                    <li><a href="portfolio_grid3.html"><span>Croatia</span></a></li>
+                                    <li><a href="portfolio_grid.html"><span>Greece</span></a></li>
+                                    <li><a href="portfolio_masonry2.html"><span>Montenegro</span></a></li>
+                                    <li><a href="portfolio_masonry3.html"><span>Serbia</span></a></li>
+                                    <li><a href="portfolio_masonry.html"><span>Slovenia</span></a></li>
 <!--                                    <li class="menu-item-has-children">-->
 <!--                                    	<a href="#"><span>Columns</span></a>-->
 <!--                                        <ul class="sub-menu">-->
@@ -55,7 +55,7 @@
 <!--                                            <li><a href="portfolio_3columns.html"><span>Portfolio. 3 Columns</span></a></li>-->
 <!--                                            <li><a href="portfolio_4columns.html"><span>Portfolio. 4 Columns</span></a></li>-->
 <!--                                        </ul>-->
-<!--                                    </li>-->
+<!--                                    </li>                                -->
 <!--                                    <li class="menu-item-has-children">-->
 <!--                                    	<a href="#"><span>Posts</span></a>-->
 <!--                                        <ul class="sub-menu">-->
@@ -67,8 +67,8 @@
 <!--                                            <li><a href="portfolio_simple_post_with_sidebar.html"><span>Simple with Sidebar</span></a></li>-->
 <!--                                        </ul>-->
 <!--                                    </li>-->
-                                </ul>
-                            </li>
+                                </ul>                                
+                            </li> 
 <!--                            <li class="menu-item-has-children">-->
 <!--                            	<a href="#"><span>News</span></a>-->
 <!--                                <ul class="sub-menu">-->
@@ -104,7 +104,7 @@
 <!--                            </li>-->
                         </ul>                    
                     </div>
-                </nav>                
+                </nav>                          
                 <div class="widget_area">                	
                     <div class="span12">
                     	<div class="sidepanel widget_text">
@@ -133,7 +133,7 @@
     	</div>
 	</header>
     
-	<a href="javascript:void(0)" class="control_toggle"></a>
+    <a href="javascript:void(0)" class="control_toggle"></a>
     
     <div class="custom_bg img_bg def_bg"></div>
     
@@ -141,74 +141,85 @@
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>    
     <script type="text/javascript" src="js/modules.js"></script>
 	<script type="text/javascript" src="js/theme.js"></script>
-    <script>
-    	gallery_set = [
-			{type: "image", image: "img/gallery/slider/1.jpg", thmb: "img/gallery/slider/thumbs/1.jpg", alt: "Sarah Brown", title: "Sarah Brown", description: "Curabitur condimentum pharetra metus, sit amet facilisis ante laoreet rutrum.", titleColor: "#ffffff", descriptionColor: "#ffffff"},
-			{type: "image", image: "img/gallery/slider/2.jpg", thmb: "img/gallery/slider/thumbs/2.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
-			{type: "vimeo", uniqid: "4675", src: "80033084", thmb: "img/gallery/slider/thumbs/3.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
-			{type: "image", image: "img/gallery/slider/4.jpg", thmb: "img/gallery/slider/thumbs/4.jpg", alt: "Jessica Black", title: "Jessica Black", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliquam mi mauris.", titleColor: "#ffffff", descriptionColor: "#ffffff"},
-			{type: "image", image: "img/gallery/slider/5.jpg", thmb: "img/gallery/slider/thumbs/5.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
-			{type: "image", image: "img/gallery/slider/6.jpg", thmb: "img/gallery/slider/thumbs/6.jpg", alt: "Anna White", title: "Anna White", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliquam mi mauris.", titleColor: "#ffffff", descriptionColor: "#ffffff"},
-			{type: "image", image: "img/gallery/slider/7.jpg", thmb: "img/gallery/slider/thumbs/7.jpg", alt: "Sarah Brown", title: "Sarah Brown", description: "Curabitur condimentum pharetra metus, sit amet facilisis ante laoreet rutrum.", titleColor: "#000000", descriptionColor: "#000000"},
-			{type: "image", image: "img/gallery/slider/8.jpg", thmb: "img/gallery/slider/thumbs/8.jpg", alt: "Jessica Black", title: "Jessica Black", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliquam mi mauris.", titleColor: "#ffffff", descriptionColor: "#ffffff"},
-			{type: "image", image: "img/gallery/slider/9.jpg", thmb: "img/gallery/slider/thumbs/9.jpg", alt: "Amelia Thomas", title: "Amelia Thomas", description: "Curabitur condimentum pharetra metus, sit amet facilisis ante laoreet rutrum.", titleColor: "#ffffff", descriptionColor: "#ffffff"},
-			{type: "image", image: "img/gallery/slider/10.jpg", thmb: "img/gallery/slider/thumbs/10.jpg", alt: "Laura Brown", title: "Laura Brown", description: "Etiam vitae lobortis nulla nam nisi enim, ultricies eget ex auctor.", titleColor: "#ffffff", descriptionColor: "#ffffff"}
-		]
-		
-		jQuery(document).ready(function(){
-			"use strict";
-			jQuery('html').addClass('hasPag');
-			jQuery('.custom_bg').remove();
-			jQuery('body').fs_gallery({
-				fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
-				fit: 'no_fit',
-				slide_time: 3300, /*This time must be < then time in css*/
-				autoplay: 1,
-				show_controls: 1,
-				slides: gallery_set
-			});
-			jQuery('.fs_share').click(function(){
-				jQuery('.fs_fadder').removeClass('hided');
-				jQuery('.fs_sharing_wrapper').removeClass('hided');
-				jQuery('.fs_share_close').removeClass('hided');
-			});
-			jQuery('.fs_share_close').click(function(){
-				jQuery('.fs_fadder').addClass('hided');
-				jQuery('.fs_sharing_wrapper').addClass('hided');
-				jQuery('.fs_share_close').addClass('hided');
-			});
-			jQuery('.fs_fadder').click(function(){
-				jQuery('.fs_fadder').addClass('hided');
-				jQuery('.fs_sharing_wrapper').addClass('hided');
-				jQuery('.fs_share_close').addClass('hided');
-			});
-	
-			jQuery('.fs_controls').addClass('up_me');
-			jQuery('.fs_title_wrapper ').addClass('up_me');
-		
-			jQuery('.close_controls').click(function(){
-				if (jQuery(this).hasClass('open_controls')) {
-					jQuery('.fs_controls').removeClass('hide_me');
-					jQuery('.fs_title_wrapper ').removeClass('hide_me');
-					jQuery('.fs_thmb_viewport').removeClass('hide_me');
-					jQuery('header.main_header').removeClass('hide_me');
-					jQuery(this).removeClass('open_controls');
-				} else {		
-					jQuery('header.main_header').addClass('hide_me');
-					jQuery('.fs_controls').addClass('hide_me');
-					jQuery('.fs_title_wrapper ').addClass('hide_me');
-					jQuery('.fs_thmb_viewport').addClass('hide_me');
-					jQuery(this).addClass('open_controls');
-				}
-			});
-			
-			jQuery('.main_header').removeClass('hided');
-			jQuery('html').addClass('single-gallery');
-			jQuery('.control_toggle').click(function(){
-				jQuery('html').toggleClass('hide_controls');
-			});			
-		});
-	</script>
     <script type="text/javascript" src="js/fs_gallery.js"></script>
 </body>
 </html>
+<script>
+    gallery_set = [
+        {type: "image", image: "img/gallery/greece/1.jpg", thmb: "img/gallery/greece/thumbs/1.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/2.jpg", thmb: "img/gallery/greece/thumbs/2.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/3.jpg", thmb: "img/gallery/greece/thumbs/3.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/4.jpg", thmb: "img/gallery/greece/thumbs/4.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/5.jpg", thmb: "img/gallery/greece/thumbs/5.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+         {type: "image", image: "img/gallery/greece/6.jpg", thmb: "img/gallery/greece/thumbs/6.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/7.jpg", thmb: "img/gallery/greece/thumbs/7.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/8.jpg", thmb: "img/gallery/greece/thumbs/8.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/9.jpg", thmb: "img/gallery/greece/thumbs/9.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/10.jpg", thmb: "img/gallery/greece/thumbs/10.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+         {type: "image", image: "img/gallery/greece/11.jpg", thmb: "img/gallery/greece/thumbs/11.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/12.jpg", thmb: "img/gallery/greece/thumbs/12.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/13.jpg", thmb: "img/gallery/greece/thumbs/13.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/14.jpg", thmb: "img/gallery/greece/thumbs/14.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/15.jpg", thmb: "img/gallery/greece/thumbs/15.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+         {type: "image", image: "img/gallery/greece/16.jpg", thmb: "img/gallery/greece/thumbs/16.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/17.jpg", thmb: "img/gallery/greece/thumbs/17.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/18.jpg", thmb: "img/gallery/greece/thumbs/18.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/19.jpg", thmb: "img/gallery/greece/thumbs/19.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+        {type: "image", image: "img/gallery/greece/20.jpg", thmb: "img/gallery/greece/thumbs/20.jpg", alt: "", title: "", description: "", titleColor: "#000000", descriptionColor: "#000000"},
+    ]
+    jQuery(document).ready(function(){
+        "use strict";
+        jQuery('.main_header').removeClass('hided');
+        jQuery('html').addClass('single-gallery');
+        jQuery('html').addClass('hide_controls');
+        jQuery('html').addClass('without_thmb');
+        jQuery('.control_toggle').click(function(){
+            jQuery('html').toggleClass('hide_controls');
+        });
+
+        jQuery('html').addClass('hasPag');
+        jQuery('.custom_bg').remove();
+        jQuery('body').fs_gallery({
+            fx: 'fade', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
+            fit: 'fit_height',
+            slide_time: 3300, /*This time must be < then time in css*/
+            autoplay: 1,
+            show_controls: 0,
+            slides: gallery_set
+        });
+        jQuery('.fs_share').click(function(){
+            jQuery('.fs_fadder').removeClass('hided');
+            jQuery('.fs_sharing_wrapper').removeClass('hided');
+            jQuery('.fs_share_close').removeClass('hided');
+        });
+        jQuery('.fs_share_close').click(function(){
+            jQuery('.fs_fadder').addClass('hided');
+            jQuery('.fs_sharing_wrapper').addClass('hided');
+            jQuery('.fs_share_close').addClass('hided');
+        });
+        jQuery('.fs_fadder').click(function(){
+            jQuery('.fs_fadder').addClass('hided');
+            jQuery('.fs_sharing_wrapper').addClass('hided');
+            jQuery('.fs_share_close').addClass('hided');
+        });
+
+        jQuery('.fs_controls').addClass('up_me');
+        jQuery('.fs_title_wrapper ').addClass('up_me');
+
+        jQuery('.close_controls').click(function(){
+            if (jQuery(this).hasClass('open_controls')) {
+                jQuery('.fs_controls').removeClass('hide_me');
+                jQuery('.fs_title_wrapper ').removeClass('hide_me');
+                jQuery('.fs_thmb_viewport').removeClass('hide_me');
+                jQuery('header.main_header').removeClass('hide_me');
+                jQuery(this).removeClass('open_controls');
+            } else {
+                jQuery('header.main_header').addClass('hide_me');
+                jQuery('.fs_controls').addClass('hide_me');
+                jQuery('.fs_title_wrapper ').addClass('hide_me');
+                jQuery('.fs_thmb_viewport').addClass('hide_me');
+                jQuery(this).addClass('open_controls');
+            }
+        });
+    });
+</script>
