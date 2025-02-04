@@ -1459,7 +1459,7 @@ body {
 }
 
 .def_bg {
-	background-image:url(../img/def_bg.jpg);
+	background-image:url(../img/def_pattern.png);
 }
 
 .def_pattern {
@@ -3684,7 +3684,7 @@ a.shortcode_social_icon:hover {
     display: block;
     background-size: cover;
     z-index: -1;
-	background-image:url(../img/bgs/404.jpg);
+	background-image:url(../img/bgs/1.jpg);
 }
 
 .search_form.search404:before {
@@ -6310,19 +6310,19 @@ span.wpcf7-not-valid-tip {
 }
 
 .bg_about {
-	background-image:url(../img/bgs/about.jpg);
+	background-image:url(../img/bgs/1.jpg);
 }
 
 .bg2 {
-	background-image:url(../img/bgs/2.jpg);
+	background-image:url(../img/bgs/1.jpg);
 }
 
 .coming_soon {
-	background-image:url(../img/bgs/coming_soon.jpg);	
+	background-image:url(../img/bgs/1.jpg);
 }
 
 .map_bg {
-	background-image:url(../img/bgs/map.jpg);
+	background-image:url(../img/bgs/1.jpg);
 }
 
 .element {
